@@ -26,7 +26,7 @@ namespace AppAnalysisDesign
             // Exercise 2: write a function that determines if a character is a number or not
             char y = '8';
             Console.WriteLine(Program.isNumber(y));
-        }
+        } 
 
         public static bool isLetter(char x)
         {
@@ -71,6 +71,6 @@ namespace AppAnalysisDesign
         // Automatic memory management
         // CLR - common language runtime
         // GC - Garbage Collector
-
+        // update.
     }
 }
