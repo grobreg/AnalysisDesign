@@ -24,8 +24,11 @@ namespace AppAnalysisDesign
             char x = 'g';
             Console.WriteLine(Program.isLetter(x));
             // Exercise 2: write a function that determines if a character is a number or not
-            char y = ',';
+            char y = '5';
             Console.WriteLine(Program.isNumber(y));
+
+            char z = '?';
+            Console.WriteLine(Program.isNumber(z));
         } 
 
         public static bool isLetter(char x)
