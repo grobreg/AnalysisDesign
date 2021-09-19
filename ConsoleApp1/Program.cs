@@ -24,15 +24,16 @@ namespace AppAnalysisDesign
             char x = 'g';
             Console.WriteLine(Program.isLetter(x));
             // Exercise 2: write a function that determines if a character is a number or not
-            char y = '8';
+            char y = ',';
             Console.WriteLine(Program.isNumber(y));
         } 
 
         public static bool isLetter(char x)
         {
-            if (x == 'a' || x == 'b' || x == 'c' || x == 'd' || x == 'e' || x == 'f' || x == 'g' || x == 'h' || x == 'i' || x == 'j' || x == 'l' || x == 'k' || x == 'l' || x == 'm' || x == 'n' || x == 'o' || x == 'p' || x == 'q' || x == 'r' || x == 's' || x == 't' || x == 'u' || x == 'v' || x == 'w' || x == 'y' || x == 'z')
+            // if (x == 'a' || x == 'b' || x == 'c' || x == 'd' || x == 'e' || x == 'f' || x == 'g' || x == 'h' || x == 'i' || x == 'j' || x == 'l' || x == 'k' || x == 'l' || x == 'm' || x == 'n' || x == 'o' || x == 'p' || x == 'q' || x == 'r' || x == 's' || x == 't' || x == 'u' || x == 'v' || x == 'w' || x == 'y' || x == 'z')
+            if (x >= 65 && x <= 122)
             {
-                Console.WriteLine("The letter is: " + x);
+                Console.WriteLine("The character is a letter!");
                 return true;
             }
 
@@ -42,7 +43,8 @@ namespace AppAnalysisDesign
         }
         public static bool isNumber(char y)
         {
-            if (y == '0' || y == '1' || y == '2' || y == '3' || y == '4' || y == '5' || y == '6' || y == '7' || y == '8' || y == '9')
+            if (y >= 48 && y <= 57)
+            // if (y == '0' || y == '1' || y == '2' || y == '3' || y == '4' || y == '5' || y == '6' || y == '7' || y == '8' || y == '9')
                 return true;
             return false;
         }
