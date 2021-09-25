@@ -13,7 +13,7 @@ namespace ConsoleApp2
 
             var stock = new Stock()
             {
-                Name = "Zion Inc.",
+                Name = "Zion Inc.", 
                 NumberOfShares = 23
             };
             Program.Display(stock);
