@@ -6,19 +6,6 @@ namespace AppAnalysisDesign
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            string firstName = "Gabriel";
-            string lastName = "Regio";
-
-            Console.WriteLine(firstName + " - " + lastName);
-
-            Program.PrintVars();
-
-            char c = 'a';
-            Console.WriteLine(Program.IsVowel(c));
-
-            char w = 'w';
-            Console.WriteLine(Program.IsVowel(w));
 
             // Exercise 1: write a function that determines if a character is a letter or not
             char x = 'g';
@@ -26,10 +13,16 @@ namespace AppAnalysisDesign
             // Exercise 2: write a function that determines if a character is a number or not
             char y = '5';
             Console.WriteLine(Program.isNumber(y));
+            // Exercise 3: write a function that converts a Char to lowercase of the same Char
+            convertToLower();
+            // Exercise 4: write a function that converts a Char to uppercase of the same Char
+            convertToUpper();
+            // Exercise 5: write a function that converts every character in a string to lowercase using the function you wrote in Exercise 3
+            convertLetterLower();
+            // Exercise 6: write a function that converts every character in a string to uppercase using the function you wrote in Exercise 4
+            convertLetterUpper();
 
-            char z = '?';
-            Console.WriteLine(Program.isNumber(z));
-        } 
+        }
 
         public static bool isLetter(char x)
         {
@@ -47,24 +40,50 @@ namespace AppAnalysisDesign
         public static bool isNumber(char y)
         {
             if (y >= 48 && y <= 57)
-            // if (y == '0' || y == '1' || y == '2' || y == '3' || y == '4' || y == '5' || y == '6' || y == '7' || y == '8' || y == '9')
+            {
+                // if (y == '0' || y == '1' || y == '2' || y == '3' || y == '4' || y == '5' || y == '6' || y == '7' || y == '8' || y == '9')
+                Console.WriteLine("The character is a number!");
                 return true;
+            }
             return false;
         }
-        public static void PrintVars()
-        {
-            int year = 2021;
-            bool isClassStarted = true;
 
-            Console.WriteLine("year: {0} isClassStarted: {1}", year, isClassStarted);
+        public static void convertLetterLower()
+        {
+            {
+                char t = 'X';
+                char a = (char)(t + 32);
+                Console.WriteLine($"Converted the LETTER {t} to lowercase: {a}\n");
+            }
         }
 
-        public static bool IsVowel(char c)
+        public static void convertLetterUpper()
         {
-            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
-                return true;
+            {
+                char t = 'x';
+                char a = (char)(t - 32);
+                Console.WriteLine($"Converted the LETTER {t} to uppercase: {a}\n");
+            }
+        }
 
-            return false;
+        public static void convertToLower()
+        {
+            string letter1 = "HELLO";
+            for (int i = 0; i < letter1.Length; i++)
+            {
+                char convertedLetter = (char)(letter1[i] + 32);
+                Console.WriteLine($"The string is converted to lowercase: {convertedLetter}\n");
+            }
+        }
+
+        public static void convertToUpper()
+        {
+            string letter1 = "apple";
+            for (int i = 0; i < letter1.Length; i++)
+            {
+                char convertedLetter = (char)(letter1[i] - 32);
+                Console.WriteLine($"The string is converted to uppercase: {convertedLetter}\n");
+            }
         }
 
         // .net code gets build into IL
